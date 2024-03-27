@@ -38,17 +38,13 @@ const displayAverageSalary = function(employeesArray) {
   console.log("The average salary of our " + employeeCount + " employees is: " + salaryAverage.toLocaleString("en-US", {style: "currency", currency: "USD"}));
 }
 
-
-
-// ("en-US", {style: "currency", currency: USD}));
-
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   let randomIndex = Math.floor(Math.random()*employeesArray.length);
   let randomEmployee = employeesArray[randomIndex];
 
-  console.log('Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, , our random draw winner!');
+  console.log("Congratulations to " + randomEmployee.firstName + " " + randomEmployee.lastName + ", our random draw winner!");
 }
 
 /*
