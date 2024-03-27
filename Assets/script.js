@@ -35,7 +35,7 @@ const displayAverageSalary = function(employeesArray) {
 
   let employeeCount = (employees.length || 1);
   let salaryAverage = totalSalary / employeeCount;
-  console.log("The average salary of our " + employeeCount + " employees is: " + salaryAverage);
+  console.log("The average salary of our " + employeeCount + " employees is: " + salaryAverage.toLocaleString("en-US", {style: "currency", currency: "USD"}));
 }
 
 
