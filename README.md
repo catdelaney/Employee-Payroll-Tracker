@@ -1,4 +1,3 @@
-# UoT-Module-3-Challenge
 # Employee Payroll Tracker
 
 ## Description
@@ -21,4 +20,5 @@ WHEN I choose to cancel
 THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
 ## Links
 Deployed Link: https://catdelaney.github.io/UoT-Module-3-Challenge-EMPLOYEE-PAYROLL-TRACKER/
+
 GitHub Repo: https://github.com/catdelaney/UoT-Module-3-Challenge-EMPLOYEE-PAYROLL-TRACKER

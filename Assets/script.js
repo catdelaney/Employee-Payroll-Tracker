@@ -13,6 +13,11 @@ const collectEmployees = function() {
     let lastName = prompt("Enter the employee's last name");
     let salary = prompt("Enter the employee's salary amount");
 
+    while (isNaN(salary) || salary <=0) {
+      alert("Please insure the entered employee salary is a positive number.");
+      salary = prompt("Enter the employee's salary amount");
+    }
+
     let employee = {
       firstName: firstName,
       lastName: lastName,
@@ -29,11 +34,11 @@ const collectEmployees = function() {
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let totalSalary = 0
-  for (let employee of employees) {
+  for (let employee of employeesArray) {
     totalSalary += employee.salary;
   }
 
-  let employeeCount = (employees.length || 1);
+  let employeeCount = (employeesArray.length || 1);
   let salaryAverage = totalSalary / employeeCount;
   console.log("The average salary of our " + employeeCount + " employees is: " + salaryAverage.toLocaleString("en-US", {style: "currency", currency: "USD"}));
 }
@@ -41,7 +46,7 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-  let randomIndex = Math.floor(Math.random()*employeesArray.length);
+  let randomIndex = Math.floor(Math.random() * employeesArray.length);
   let randomEmployee = employeesArray[randomIndex];
 
   console.log("Congratulations to " + randomEmployee.firstName + " " + randomEmployee.lastName + ", our random draw winner!");
